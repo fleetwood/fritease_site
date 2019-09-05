@@ -1,0 +1,55 @@
+{
+    "title": "To Dos",
+    "footer": "Do the things yall",
+    "list": [
+        {
+            "title": "Post Prompt",
+            "description": [
+                "Scheduler.",
+                "Pull users from db entry into FF5 session."
+            ]
+        },
+        {
+            "title": "FF5",
+            "description": [
+                "Disable Add buttons for users already in FF5.",
+                "Update Profile to include FF5 history."
+            ],
+            "footer": "FF5 Tweaks. Low Priority."
+        },
+        {
+            "title": "Prompt Designer",
+            "description": [
+                "Image selector",
+                "Character counter."
+            ],
+            "footer": "Build out the prompt designer"
+        },
+        {
+            "title": "Notifs",
+            "description": [
+                "Add notifications:",
+                "1. Tweet posted."
+            ],
+            "footer": "Build out the prompt designer"
+        },
+        {
+            "title": "Sorter",
+            "description": [
+                "Sort the stream by certain properties."
+            ],
+            "footer": "Date, User Rank, Likes/Retweets"
+        },
+        {
+            "title": "Pub-Sub",
+            "description": [
+                "Set up a Kafka queue for checking on new entries or performing user rank logic!"
+            ],
+            "footer": "Holy fuck the christ, ugh."
+        },
+        {
+            "title": "This",
+            "footer": "Replace this with something else."
+        }
+    ]
+}

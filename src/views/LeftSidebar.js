@@ -1,29 +1,11 @@
 import React from 'react';
 import LeftSidebarItem from './items/LeftSideBarItem';
 
-export default function LeftSidebar() {
-    const title = 'Add title'
-        , footer = 'Add footer'
-        , items = [
-            {
-                title: 'John', 
-                items: [
-                    'This is one',
-                    'This is two',
-                    'This is three'
-                ],
-                footer: 'John Footer'
-            },
-            {
-                title: 'Christina', 
-                items: [
-                    'This is Apple',
-                    'This is Banana',
-                    'This is Chrysanthemum'
-                ],
-                footer: 'Christina Feets'
-            }
-        ];
+export default function LeftSidebar(props) {
+    const title = props.title || ''
+        , footer = props.footer || ''
+        , items = props.items || [];
+
     return (
         <div id="dashboard-simplelist" class="module wtf-module js-wtf-module roaming-module has-content">
 
@@ -33,8 +15,8 @@ export default function LeftSidebar() {
                 </div>
                 <div class="UserSmallListItem js-account-summary account-summary js-actionable-user">
                     <ul class="trend-items js-trends">
-                        {items.map((index, item) => {
-                            return <LeftSidebarItem key={index} item={items[item]} />
+                        {items.list.map((index, item) => {
+                            return <LeftSidebarItem key={index} item={items.list[item]} />
                         })}
                     </ul>
                 </div>

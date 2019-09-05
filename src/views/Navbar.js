@@ -58,7 +58,7 @@ export default function Navbar() {
                             </div>
                             <ul className="nav right-actions">
                                 <li className="me dropdown session js-session" data-global-action="t1me" id="user-dropdown">
-                                    <a href="/#" className="btn js-tooltip settings dropdown-toggle js-dropdown-toggle" id="user-dropdown-toggle" title="Profile and settings" data-placement="bottom" rel="noopener" role="button" aria-haspopup="true">
+                                    <a href="/#" className="btn js-tooltip settings dropdown-toggle js-dropdown-toggle" id="user-dropdown-toggle" title="Profile and settings" data-placement="bottom" rel="noopener noreferrer" role="button" aria-haspopup="true">
                                         <img className="Avatar Avatar--size32" src="https://pbs.twimg.com/profile_images/1129065277633781760/gMIz7IPd_normal.jpg" alt="Profile and settings" data-user-id="805852551090470914" />
                                     </a>
                                     <div className="DashUserDropdown dropdown-menu dropdown-menu--rightAlign is-forceRight is-autoCentered">
@@ -91,24 +91,24 @@ export default function Navbar() {
                                             </li>
                                             <li className="dropdown-divider"></li>
                                             <li>
-                                                <a href="https://ads.twitter.com/subscriptions/mobile/landing?ref=gl-tw-tw-promote-mode" target="_blank" data-nav="promote-mode" rel="noopener">
+                                                <a href="https://ads.twitter.com/subscriptions/mobile/landing?ref=gl-tw-tw-promote-mode" target="_blank" data-nav="promote-mode" rel="noopener noreferrer">
                                                     <span className="DashUserDropdown-linkIcon Icon Icon--medium Icon--promoteMode"></span>Promote Mode
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="https://ads.twitter.com/?ref=gl-tw-tw-twitter-ads" target="_blank" data-nav="ads" rel="noopener">
+                                                <a href="https://ads.twitter.com/?ref=gl-tw-tw-twitter-ads" target="_blank" data-nav="ads" rel="noopener noreferrer">
                                                     <span className="DashUserDropdown-linkIcon Icon Icon--medium Icon--promotedStroked"></span>Twitter Ads
                                                 </a>
                                             </li>
                                             <li>
-                                                <a className="user-dropdown-analytics" href="https://analytics.twitter.com/" target="_blank" data-nav="user_dropdown_analytics" rel="noopener">
+                                                <a className="user-dropdown-analytics" href="https://analytics.twitter.com/" target="_blank" data-nav="user_dropdown_analytics" rel="noopener noreferrer">
                                                     <span className="DashUserDropdown-linkIcon Icon Icon--medium Icon--analytics"></span>Analytics
                                                 </a>
                                             </li>
                                             <li className="dropdown-divider"></li>
-                                            <li><a href="/settings" data-nav="settings" className="js-nav" rel="noopener">Settings and privacy</a>
+                                            <li><a href="/settings" data-nav="settings" className="js-nav" rel="noopener noreferrer">Settings and privacy</a>
                                             </li>
-                                            <li><a href="//support.twitter.com" data-nav="help_center" rel="noopener">Help Center</a></li>
+                                            <li><a href="//support.twitter.com" data-nav="help_center" rel="noopener noreferrer">Help Center</a></li>
                                             <li className="js-keyboard-shortcut-trigger" data-nav="shortcuts">
                                                 <button type="button" className="dropdown-link">Keyboard shortcuts</button>
                                             </li>
