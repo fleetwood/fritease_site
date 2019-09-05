@@ -1,0 +1,94 @@
+<div class="modal-content TweetstormDialog-content" role="document">
+    <div class="modal-header">
+        <h3 class="modal-title" id="Tweetstorm-dialog-header">Compose new Tweet</h3>
+    </div>
+    <div class="modal-body">
+        <div class="tweet-loading">
+            <div class="spinner-bigger"></div>
+        </div>
+        <div id="Tweetstorm-tweet-box-0"
+            class="TweetstormDialog-tweet-box t1-form tweet-form initialized is-tweet-box-focus" style=""
+            data-index="0">
+            <div class="tweet-box-avatar">
+                <img class="Avatar--size32 user-avatar-img avatar"
+                    src="https://pbs.twimg.com/profile_images/1129065277633781760/gMIz7IPd_normal.jpg"
+                    alt="John Pendleton 🌹">
+            </div>
+            <div class="tweet-box-content">
+                <div class="tweet-content">
+                    <textarea id="tweet-textarea" class="tweet-box-shadow u-borderRadiusInherit" name="status"></textarea>
+                </div>
+                <div class="TweetBoxToolbar" style="">
+                    <div class="TweetBoxExtras tweet-box-extras">
+                        <span class="TweetBoxExtras-item TweetBox-mediaPicker">
+                            <div class="photo-selector">
+                                <button aria-hidden="true" class="btn icon-btn js-tooltip" type="button" tabindex="-1"
+                                    data-original-title="Add photos or video">
+                                    <span class="tweet-camera Icon Icon--media"></span>
+                                    <span class="text add-photo-label u-hiddenVisually">Add photos or video</span>
+                                </button>
+                                <div class="image-selector">
+                                    <input type="hidden" name="media_data_empty" class="file-data">
+                                    <div class="multi-photo-data-container hidden">
+                                    </div>
+                                    <label class="t1-label">
+                                        <span class="visuallyhidden">Add photos or video</span>
+                                        <input type="file" name="media[]"
+                                            accept="image/gif,image/jpeg,image/jpg,image/png,video/mp4,video/x-m4v"
+                                            multiple="" class="file-input js-tooltip"
+                                            data-original-title="Add photos or video" data-delay="150">
+                                    </label>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="TweetBoxToolbar-tweetButton">
+                        <span class="buttons">
+                            <button
+                                class="js-add-tweet EdgeButton EdgeButton--secondary EdgeButton--icon EdgeButton--medium js-tooltip disabled"
+                                title="Add another Tweet" aria-label="Add another Tweet" data-placement="top"
+                                data-delay="150" data-original-title="Add another Tweet" disabled="">
+                                <span class="Icon Icon--add Icon--medium"></span>
+                            </button>
+                            <button
+                                class="SendTweetsButton EdgeButton EdgeButton--primary EdgeButton--medium js-send-tweets disabled"
+                                type="button" disabled="">
+                                <span class="button-text">Tweet</span>
+                            </button>
+                            <button class="js-delete-tweet EdgeButton EdgeButton--medium EdgeButton--icon js-tooltip"
+                                title="Delete Tweet"
+                                aria-labelledby="Tweetstorm-tweet-box-0-label Tweetstorm-tweet-box-0-delete-label"
+                                data-placement="top" data-delay="150">
+                                <span class="visuallyhidden" id="Tweetstorm-tweet-box-0-delete-label">Delete Tweet</span>
+                                <span class="Icon Icon--delete Icon--large"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div id="TweetAttachmentContainer" class="TweetBoxAttachments"></div>
+            </div>
+            <div style="position: absolute; visibility: hidden;">
+                <div><br></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="buttons">
+            <button
+                class="js-add-tweet EdgeButton EdgeButton--secondary EdgeButton--icon EdgeButton--medium js-tooltip disabled"
+                title="Add another Tweet" aria-label="Add another Tweet" data-placement="top" data-delay="150"
+                data-original-title="Add another Tweet" disabled="">
+                <span class="Icon Icon--add Icon--medium"></span>
+            </button>
+            <button class="SendTweetsButton EdgeButton EdgeButton--primary EdgeButton--medium js-send-tweets disabled"
+                type="button" disabled="">
+                <span class="button-text">Tweet all</span>
+            </button>
+        </div>
+    </div>
+</div>
+<button type="button" class="modal-btn modal-close js-close" aria-controls="Tweetstorm-dialog-dialog">
+    <span id="modal-close-button" class="Icon Icon--close Icon--medium">
+        <span class="visuallyhidden">Close</span>
+    </span>
+</button>

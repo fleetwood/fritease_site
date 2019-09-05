@@ -1,0 +1,35 @@
+<div class="profile-card ProfileCard with-banner with-social-proof component profile-header hovercard gravity-north weight-left"
+    data-component-context="profile_hover">
+    <div class="hover-offset">
+        <div class="arrow" style=""></div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="100"
+            viewBox="0 0 600 200">
+            <defs>
+                <clipPath id="clipping">
+                    <polygon points="50,10 60,0 70,10 50,10"></polygon>
+                </clipPath>
+            </defs>
+            <image xlink:href="{{user.profileBanner}}" width="600" height="200" clip-path="url(#clipping)"></image>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="100"
+            viewBox="0 0 600 200" class="right-side">
+            <defs>
+                <clipPath id="clipping">
+                    <polygon points="450,10 460,0 470,10 450,10"></polygon>
+                </clipPath>
+            </defs>
+            <image xlink:href="{{user.profileBanner}}" width="600" height="200" clip-path="url(#clipping)"></image>
+        </svg>
+    </div>
+
+    <div class="dismiss js-action-dismiss profile-card-dismiss" style="margin-right: 10px;">
+        <span class="Icon Icon--close"></span>
+    </div>
+
+    <div class="ProfileCard-content">
+        <div class="bio-container">
+            <p class="bio profile-field u-dir" dir="ltr">{{{message}}}</p>
+        </div>
+    </div>
+
+</div>

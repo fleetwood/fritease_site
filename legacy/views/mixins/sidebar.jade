@@ -1,0 +1,332 @@
+include module_search
+
+mixin sidebar
+    .SidebarCommonModules
+
+        +module_search
+
+        //- .module.wtf-module.js-wtf-module.roaming-module.has-content
+        //-     .flex-module
+        //-         .flex-module-header
+        //-             h3 Who to follow
+        //-             small · 
+        //-             button.btn-link.js-refresh-suggestions(type='button')
+        //-                 small Refresh
+        //-             small.view-all
+        //-                 | · 
+        //-                 a.js-view-all-link.js-nav(href='/who_to_follow/suggestions', data-element-term='view_all_link') View all
+        //-         .js-recommended-followers.dashboard-user-recommendations.flex-module-inner(data-section-id='wtf', style='opacity: 1;')
+        //-             .UserSmallListItem.js-account-summary.account-summary.js-actionable-user(data-user-id='760078942590078976', data-feedback-token='500', data-impression-id='')
+        //-                 .UserSmallListItem-context
+        //-                     .UserSmallListItem-contextIcon
+        //-                         span.Icon.Icon--follower.Icon--smallest
+        //-                     .UserSmallListItem-contextText.metadata.social-context
+        //-                         | Followed by 
+        //-                         a.pretty-link.user-profile-link.js-user-profile-link(data-user-id='2844107402', href='/AuthorStacyGold', rel='noopener')
+        //-                             b Stacy Gold
+        //-                         |  and 
+        //-                         a.pretty-link.u-textUserColor(href='/ewardharris/followers_you_follow')
+        //-                             b others
+        //-                 .dismiss.js-action-dismiss
+        //-                     span.Icon.Icon--close
+        //-                 .content
+        //-                     a.account-group.js-recommend-link.js-user-profile-link.user-thumb(href='/ewardharris', data-user-id='760078942590078976', rel='noopener')
+        //-                         img.avatar.js-action-profile-avatar(src='https://pbs.twimg.com/profile_images/923108699291439104/SmvydKN7_bigger.jpg', alt='')
+        //-                         span.account-group-inner(data-user-id='760078942590078976')
+        //-                             strong.fullname Elisabeth
+        //-                             span.UserBadges
+        //-                             span.UserNameBreak  
+        //-                             span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                 | @
+        //-                                 b ewardharris
+        //-                     .user-actions.not-following.not-muting(data-screen-name='ewardharris', data-user-id='760078942590078976')
+        //-                         span.user-actions-follow-button.js-follow-btn.follow-button
+        //-                             button.EdgeButton.EdgeButton--secondary.EdgeButton--small.button-text.follow-text(type='button')
+        //-                                 span(aria-hidden='true') Follow
+        //-                                 span.u-hiddenVisually
+        //-                                     | Follow 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b ewardharris
+        //-                             button.EdgeButton.EdgeButton--primary.EdgeButton--small.button-text.following-text(type='button')
+        //-                                 span(aria-hidden='true') Following
+        //-                                 span.u-hiddenVisually
+        //-                                     | Following 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b ewardharris
+        //-                             button.EdgeButton.EdgeButton--danger.EdgeButton--small.button-text.unfollow-text(type='button')
+        //-                                 span(aria-hidden='true') Unfollow
+        //-                                 span.u-hiddenVisually
+        //-                                     | Unfollow 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b ewardharris
+        //-                             button.EdgeButton.EdgeButton--invertedDanger.EdgeButton--small.button-text.blocked-text(type='button')
+        //-                                 span(aria-hidden='true') Blocked
+        //-                                 span.u-hiddenVisually
+        //-                                     | Blocked 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b ewardharris
+        //-                             button.EdgeButton.EdgeButton--danger.EdgeButton--small.button-text.unblock-text(type='button')
+        //-                                 span(aria-hidden='true') Unblock
+        //-                                 span.u-hiddenVisually
+        //-                                     | Unblock 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b ewardharris
+        //-                             button.EdgeButton.EdgeButton--secondary.EdgeButton--small.button-text.pending-text(type='button')
+        //-                                 span(aria-hidden='true') Pending
+        //-                                 span.u-hiddenVisually
+        //-                                     | Pending follow request from 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b ewardharris
+        //-                             button.EdgeButton.EdgeButton--secondary.EdgeButton--small.button-text.cancel-text(type='button')
+        //-                                 span(aria-hidden='true') Cancel
+        //-                                 span.u-hiddenVisually
+        //-                                     | Cancel your follow request to 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b ewardharris
+        //-             .UserSmallListItem.js-account-summary.account-summary.js-actionable-user(data-user-id='748264264213868544', data-feedback-token='500', data-impression-id='')
+        //-                 .UserSmallListItem-context
+        //-                     .UserSmallListItem-contextIcon
+        //-                         span.Icon.Icon--follower.Icon--smallest
+        //-                     .UserSmallListItem-contextText.metadata.social-context
+        //-                         | Followed by 
+        //-                         a.pretty-link.user-profile-link.js-user-profile-link(data-user-id='764924399426428930', href='/tanyachrs', rel='noopener')
+        //-                             b Tanya Chris
+        //-                         |  and 
+        //-                         a.pretty-link.u-textUserColor(href='/Dana_MuChick/followers_you_follow')
+        //-                             b others
+        //-                 .dismiss.js-action-dismiss
+        //-                     span.Icon.Icon--close
+        //-                 .content
+        //-                     a.account-group.js-recommend-link.js-user-profile-link.user-thumb(href='/Dana_MuChick', data-user-id='748264264213868544', rel='noopener')
+        //-                         img.avatar.js-action-profile-avatar(src='https://pbs.twimg.com/profile_images/982652754635128832/QZYJacWW_bigger.jpg', alt='')
+        //-                         span.account-group-inner(data-user-id='748264264213868544')
+        //-                             strong.fullname Dana
+        //-                             span.UserBadges
+        //-                             span.UserNameBreak  
+        //-                             span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                 | @
+        //-                                 b Dana_MuChick
+        //-                     .user-actions.not-following.not-muting(data-screen-name='Dana_MuChick', data-user-id='748264264213868544')
+        //-                         span.user-actions-follow-button.js-follow-btn.follow-button
+        //-                             button.EdgeButton.EdgeButton--secondary.EdgeButton--small.button-text.follow-text(type='button')
+        //-                                 span(aria-hidden='true') Follow
+        //-                                 span.u-hiddenVisually
+        //-                                     | Follow 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b Dana_MuChick
+        //-                             button.EdgeButton.EdgeButton--primary.EdgeButton--small.button-text.following-text(type='button')
+        //-                                 span(aria-hidden='true') Following
+        //-                                 span.u-hiddenVisually
+        //-                                     | Following 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b Dana_MuChick
+        //-                             button.EdgeButton.EdgeButton--danger.EdgeButton--small.button-text.unfollow-text(type='button')
+        //-                                 span(aria-hidden='true') Unfollow
+        //-                                 span.u-hiddenVisually
+        //-                                     | Unfollow 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b Dana_MuChick
+        //-                             button.EdgeButton.EdgeButton--invertedDanger.EdgeButton--small.button-text.blocked-text(type='button')
+        //-                                 span(aria-hidden='true') Blocked
+        //-                                 span.u-hiddenVisually
+        //-                                     | Blocked 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b Dana_MuChick
+        //-                             button.EdgeButton.EdgeButton--danger.EdgeButton--small.button-text.unblock-text(type='button')
+        //-                                 span(aria-hidden='true') Unblock
+        //-                                 span.u-hiddenVisually
+        //-                                     | Unblock 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b Dana_MuChick
+        //-                             button.EdgeButton.EdgeButton--secondary.EdgeButton--small.button-text.pending-text(type='button')
+        //-                                 span(aria-hidden='true') Pending
+        //-                                 span.u-hiddenVisually
+        //-                                     | Pending follow request from 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b Dana_MuChick
+        //-                             button.EdgeButton.EdgeButton--secondary.EdgeButton--small.button-text.cancel-text(type='button')
+        //-                                 span(aria-hidden='true') Cancel
+        //-                                 span.u-hiddenVisually
+        //-                                     | Cancel your follow request to 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b Dana_MuChick
+        //-             .UserSmallListItem.js-account-summary.account-summary.js-actionable-user(data-user-id='298391670', data-feedback-token='500', data-impression-id='')
+        //-                 .UserSmallListItem-context
+        //-                     .UserSmallListItem-contextIcon
+        //-                         span.Icon.Icon--follower.Icon--smallest
+        //-                     .UserSmallListItem-contextText.metadata.social-context
+        //-                         | Followed by 
+        //-                         a.pretty-link.user-profile-link.js-user-profile-link(data-user-id='1587521689', href='/MadQueenStorm', rel='noopener')
+        //-                             b (Ghost) Storm ☽✪☾
+        //-                         |  and 
+        //-                         a.pretty-link.u-textUserColor(href='/GeneVatow/followers_you_follow')
+        //-                             b others
+        //-                 .dismiss.js-action-dismiss
+        //-                     span.Icon.Icon--close
+        //-                 .content
+        //-                     a.account-group.js-recommend-link.js-user-profile-link.user-thumb(href='/GeneVatow', data-user-id='298391670', rel='noopener')
+        //-                         img.avatar.js-action-profile-avatar(src='https://pbs.twimg.com/profile_images/975064481926533120/vfvTgVbt_bigger.jpg', alt='')
+        //-                         span.account-group-inner(data-user-id='298391670')
+        //-                             strong.fullname Indigenous Soul
+        //-                             span.UserBadges
+        //-                             span.UserNameBreak  
+        //-                             span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                 | @
+        //-                                 b GeneVatow
+        //-                     .user-actions.not-following.not-muting(data-screen-name='GeneVatow', data-user-id='298391670')
+        //-                         span.user-actions-follow-button.js-follow-btn.follow-button
+        //-                             button.EdgeButton.EdgeButton--secondary.EdgeButton--small.button-text.follow-text(type='button')
+        //-                                 span(aria-hidden='true') Follow
+        //-                                 span.u-hiddenVisually
+        //-                                     | Follow 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b GeneVatow
+        //-                             button.EdgeButton.EdgeButton--primary.EdgeButton--small.button-text.following-text(type='button')
+        //-                                 span(aria-hidden='true') Following
+        //-                                 span.u-hiddenVisually
+        //-                                     | Following 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b GeneVatow
+        //-                             button.EdgeButton.EdgeButton--danger.EdgeButton--small.button-text.unfollow-text(type='button')
+        //-                                 span(aria-hidden='true') Unfollow
+        //-                                 span.u-hiddenVisually
+        //-                                     | Unfollow 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b GeneVatow
+        //-                             button.EdgeButton.EdgeButton--invertedDanger.EdgeButton--small.button-text.blocked-text(type='button')
+        //-                                 span(aria-hidden='true') Blocked
+        //-                                 span.u-hiddenVisually
+        //-                                     | Blocked 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b GeneVatow
+        //-                             button.EdgeButton.EdgeButton--danger.EdgeButton--small.button-text.unblock-text(type='button')
+        //-                                 span(aria-hidden='true') Unblock
+        //-                                 span.u-hiddenVisually
+        //-                                     | Unblock 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b GeneVatow
+        //-                             button.EdgeButton.EdgeButton--secondary.EdgeButton--small.button-text.pending-text(type='button')
+        //-                                 span(aria-hidden='true') Pending
+        //-                                 span.u-hiddenVisually
+        //-                                     | Pending follow request from 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b GeneVatow
+        //-                             button.EdgeButton.EdgeButton--secondary.EdgeButton--small.button-text.cancel-text(type='button')
+        //-                                 span(aria-hidden='true') Cancel
+        //-                                 span.u-hiddenVisually
+        //-                                     | Cancel your follow request to 
+        //-                                     span.username.u-dir.u-textTruncate(dir='ltr')
+        //-                                         | @
+        //-                                         b GeneVatow
+        //-     .flex-module.import-prompt
+        //-         .flex-module-footer.u-table
+        //-             a.js-tooltip.u-tableCell.u-alignMiddle(href='/who_to_follow/import', title='Find people you know')
+        //-                 span.Icon.Icon--people.Icon--small
+        //-                 span.u-hiddenVisually Find people you know
+        //-             a.u-tableCell.u-alignMiddle.remove-discover-pymk(href='/who_to_follow/import') Find people you know
+        //- .module.Trends.trends
+            .trends-inner
+                .flex-module.trends-container.context-trends-container
+                    .flex-module-header
+                        h3
+                            span.trend-location.js-trend-location Trends for you
+                        span.middot(aria-hidden='true') ·
+                        a.btn-link.change-trends.js-trend-toggle(role='button', href='#', data-modal='change-trends')
+                            span(aria-hidden='true') Change
+                            span.u-hiddenVisually Change trend settings
+                    .flex-module-inner
+                        ul.trend-items.js-trends
+                            li.trend-item.js-trend-item.context-trend-item(data-trend-name='Mark Sanchez', data-trends-id='-7986108980923294485', data-trend-token=':tailored_request:entity_trend:taxi_worldwide_source:tweet_count_1000_10000_metadescription:')
+                                a.pretty-link.js-nav.js-tooltip.u-linkComplex(href='/search?q=%22Mark%20Sanchez%22&src=tren', data-query-source='trend_click')
+                                    span.u-linkComplex-target.trend-name(dir='ltr') Mark Sanchez
+                                    .js-nav.trend-item-context
+                                    .js-nav.trend-item-stats
+                                        | 3,511 Tweets
+                            li.trend-item.js-trend-item.context-trend-item(data-trend-name='Michael Ferro', data-trends-id='-7986108980923294485', data-trend-token=':tailored_request:entity_trend:taxi_country_source:')
+                                a.pretty-link.js-nav.js-tooltip.u-linkComplex(href='/search?q=%22Michael%20Ferro%22&src=tren', data-query-source='trend_click')
+                                    span.u-linkComplex-target.trend-name(dir='ltr') Michael Ferro
+                                    .js-nav.trend-item-context
+                                    .js-nav.trend-item-stats
+                            li.trend-item.js-trend-item.context-trend-item(data-trend-name='Dez Bryant', data-trends-id='-7986108980923294485', data-trend-token=':tailored_request:entity_trend:taxi_worldwide_source:moments_metadescription:moments_badge:')
+                                a.pretty-link.js-nav.js-tooltip.u-linkComplex(href='/search?q=%22Dez%20Bryant%22&src=tren&data_id=tweet%3A984837399099461633', data-query-source='trend_click')
+                                    span.u-linkComplex-target.trend-name(dir='ltr') Dez Bryant
+                                    .js-nav.trend-item-context
+                                    .js-nav.trend-item-stats
+                                        | Dez Bryant has been released by the Cowboys
+                            li.trend-item.js-trend-item.context-trend-item(data-trend-name='#FlashbackFriday', data-trends-id='-7986108980923294485', data-trend-token=':tailored_request:hashtag_trend:taxi_country_source:social_context_3_metadescription:')
+                                a.pretty-link.js-nav.js-tooltip.u-linkComplex(href='/hashtag/FlashbackFriday?src=tren&data_id=tweet%3A984890449331740674', data-query-source='trend_click')
+                                    span.u-linkComplex-target.trend-name(dir='ltr') #FlashbackFriday
+                                    .js-nav.trend-item-context
+                                    .js-nav.trend-item-stats
+                                        | @JWilck, @PromptAdvant and 1 more are Tweeting about this
+                            li.trend-item.js-trend-item.context-trend-item(data-trend-name='McCabe', data-trends-id='-7986108980923294485', data-trend-token=':tailored_request:entity_trend:taxi_worldwide_source:moments_metadescription:moments_badge:')
+                                a.pretty-link.js-nav.js-tooltip.u-linkComplex(href='/search?q=McCabe&src=tren&data_id=tweet%3A984908417226555392', data-query-source='trend_click')
+                                    span.u-linkComplex-target.trend-name(dir='ltr') McCabe
+                                    .js-nav.trend-item-context
+                                    .js-nav.trend-item-stats
+                                        | DOJ inspector general releases report about Andrew McCabe's conduct
+                            li.trend-item.js-trend-item.context-trend-item(data-trend-name='Braves', data-trends-id='-7986108980923294485', data-trend-token=':tailored_request:entity_trend:taxi_region_source:tweet_count_10000_100000_metadescription:')
+                                a.pretty-link.js-nav.js-tooltip.u-linkComplex(href='/search?q=Braves&src=tren', data-query-source='trend_click')
+                                    span.u-linkComplex-target.trend-name(dir='ltr') Braves
+                                    .js-nav.trend-item-context
+                                    .js-nav.trend-item-stats
+                                        | 11.9K Tweets
+                            li.trend-item.js-trend-item.context-trend-item(data-trend-name='#TechShadowDay', data-trends-id='-7986108980923294485', data-trend-token=':tailored_request:hashtag_trend:taxi_region_source:')
+                                a.pretty-link.js-nav.js-tooltip.u-linkComplex(href='/hashtag/TechShadowDay?src=tren', data-query-source='trend_click')
+                                    span.u-linkComplex-target.trend-name(dir='ltr') #TechShadowDay
+                                    .js-nav.trend-item-context
+                                    .js-nav.trend-item-stats
+                            li.trend-item.js-trend-item.context-trend-item(data-trend-name='#BoothOnBoard', data-trends-id='-7986108980923294485', data-trend-token=':tailored_request:hashtag_trend:taxi_region_source:')
+                                a.pretty-link.js-nav.js-tooltip.u-linkComplex(href='/hashtag/BoothOnBoard?src=tren', data-query-source='trend_click')
+                                    span.u-linkComplex-target.trend-name(dir='ltr') #BoothOnBoard
+                                    .js-nav.trend-item-context
+                                    .js-nav.trend-item-stats
+                            li.trend-item.js-trend-item.context-trend-item(data-trend-name='#BadReasonsToCallThePolice', data-trends-id='-7986108980923294485', data-trend-token=':tailored_request:hashtag_trend:taxi_worldwide_source:social_context_2_metadescription:')
+                                a.pretty-link.js-nav.js-tooltip.u-linkComplex(href='/hashtag/BadReasonsToCallThePolice?src=tren&data_id=tweet%3A984889644482347008', data-query-source='trend_click')
+                                    span.u-linkComplex-target.trend-name(dir='ltr') #BadReasonsToCallThePolice
+                                    .js-nav.trend-item-context
+                                    .js-nav.trend-item-stats
+                                        | @sharagodwinson and @inferno4dante are Tweeting about this
+                            li.trend-item.js-trend-item.context-trend-item(data-trend-name='El Segundo', data-trends-id='-7986108980923294485', data-trend-token=':tailored_request:entity_trend:taxi_worldwide_source:tweet_count_10000_100000_metadescription:')
+                                a.pretty-link.js-nav.js-tooltip.u-linkComplex(href='/search?q=%22El%20Segundo%22&src=tren', data-query-source='trend_click')
+                                    span.u-linkComplex-target.trend-name(dir='ltr') El Segundo
+                                    .js-nav.trend-item-context
+                                    .js-nav.trend-item-stats
+                                        | 33.7K Tweets
+        .Footer.module.roaming-module.Footer--slim.Footer--blankBackground
+            .flex-module
+                .flex-module-inner.js-items-container
+                    ul.u-cf
+                        li.Footer-item.Footer-copyright.copyright © 2018 Twitter
+                        li.Footer-item
+                            a.Footer-link(href='/about', rel='noopener') About
+                        li.Footer-item
+                            a.Footer-link(href='//support.twitter.com', rel='noopener') Help Center
+                        li.Footer-item
+                            a.Footer-link(href='/tos', rel='noopener') Terms
+                        li.Footer-item
+                            a.Footer-link(href='/privacy', rel='noopener') Privacy policy
+                        li.Footer-item
+                            a.Footer-link(href='//support.twitter.com/articles/20170514', rel='noopener') Cookies
+                        li.Footer-item
+                            a.Footer-link(href='//support.twitter.com/articles/20170451', rel='noopener') Ads info

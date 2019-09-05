@@ -1,0 +1,57 @@
+<div class="modal-content TweetstormDialog-content" role="document">
+    <div class="modal-header">
+        <h3 class="modal-title" id="Tweetstorm-dialog-header">FriTease Tweet</h3>
+    </div>
+    <div class="modal-body">
+        <div class="tweet-loading">
+            <div class="spinner-bigger"></div>
+        </div>
+        <div id="Tweetstorm-tweet-box-0"
+            class="TweetstormDialog-tweet-box t1-form tweet-form initialized is-tweet-box-focus" style=""
+            data-index="0">
+            <div class="tweet-box-avatar">
+                <img class="Avatar--size32 user-avatar-img avatar"
+                    src="https://pbs.twimg.com/profile_images/1129065277633781760/gMIz7IPd_normal.jpg"
+                    alt="John Pendleton 🌹">
+            </div>
+            <div class="tweet-box-content">
+                <div class="tweet-content">
+                    <textarea id="tweet-textarea" class="tweet-text-box" name="status"></textarea>
+                </div>
+    
+                <div id="TweetAttachmentContainer"></div>
+                
+                <div class="TweetBoxToolbar" style="">
+                    <div class="TweetBoxToolbar-tweetButton">
+                        <span class="buttons">
+                            <button class="SchedulePromptButton EdgeButton EdgeButton--primary EdgeButton--medium" type="button">
+                                <span class="button-text">Schedule</span>
+                            </button>
+                            <button class="PostPromptButton EdgeButton EdgeButton--primary EdgeButton--medium js-send-tweets" type="button">
+                                <span class="button-text">Tweet</span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+            <div style="position: absolute; visibility: hidden;">
+                <div><br></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="buttons">
+            <button class="SendTweetsButton EdgeButton EdgeButton--primary EdgeButton--medium js-send-tweets" type="button">
+                <span class="button-text">Post!</span>
+            </button>
+            <button class="EdgeButton EdgeButton--tertiary cancel-action js-close">Cancel</button>
+            <button class="EdgeButton EdgeButton--danger delete-action">Delete</button>
+        </div>
+    </div>
+</div>
+<button type="button" class="modal-btn modal-close js-close" aria-controls="Tweetstorm-dialog-dialog">
+    <span id="modal-close-button" class="Icon Icon--close Icon--medium">
+        <span class="visuallyhidden">Close</span>
+    </span>
+</button>

@@ -1,25 +1,49 @@
 <!DOCTYPE html>
-<html id='site'>
+<html id='html'>
+
+<head>
+    <title>Twitter / FriTease</title>
+
+    <link rel="stylesheet" href="./../styles/twitter_core.fritease.css" className="coreCSSBundles" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <link rel="stylesheet" href="./../styles/styles.css" />
+
+    <link href="./../scripts/init.en.js" as="script" />
+    <link href="./../scripts/commons.en.js" as="script" />
+    <link href="./../scripts/pages_home.en.js" as="script" />
+
+    <link rel="mask-icon" sizes="any" href="./../images/fritease.ico" color="#1da1f2" />
+    <link rel="shortcut icon" href="./../images/fritease.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="./../images/fritease.ico" sizes="192x192" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossOrigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha256-CjSoeELFOcH0/uxWu6mC/Vlrc1AARqbm/jiiImDGV3s=" crossOrigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"
+        integrity="sha256-fTuUgtT7O2rqoImwjrhDgbXTKUwyxxujIMRIK7TbuNU=" crossOrigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+        integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossOrigin="anonymous"></script>
+</head>
 
 <body
     class="no-nav-banners three-col logged-in user-style-johnfpendleton ms-windows NotificationsPage supports-drag-and-drop buffer-twitter"
     data-fouc-class-names="swift-loading no-nav-banners" dir="ltr">
+    <div id="navbar"></div>
 
     <div id="page-outer">
         <div id="page-container" class="AppContent wrapper wrapper-connect">
 
-            <div class="dashboard dashboard-left">
-                <div id="dashboard-simplelist" class="module wtf-module js-wtf-module roaming-module has-content">
-                </div>
+            <div id="dashboard-left" class="dashboard dashboard-left">
             </div>
 
-            <div role="main" aria-labelledby="content-main-heading" class="content-main light-inline-actions"
-                id="timeline">
-
+            <div role="main" aria-labelledby="content-main-heading" class="content-main light-inline-actions" id="timeline">
             </div>
 
-            <div class="dashboard dashboard-right">
-
+            <div id="dashboard-right" class="dashboard dashboard-right">
             </div>
         </div>
     </div>

@@ -1,0 +1,38 @@
+<script src="./../../scripts/OnRender.js"></script>
+<script src="./../../scripts/FF5.js"></script>
+<script src="./../../scripts/UIStream.js"></script>
+<script src="./../../scripts/TweetStorm.js"></script>
+<script src="./../../scripts/ProfileCard.js"></script>
+<script src="./../../scripts/FF5-Dashboard.js"></script>
+<script src="./../../scripts/friTease.js"></script>
+<script>
+    $(document).ready(() => {
+        $('#dashboard-ff5').ff5Dashboard();
+
+        $('#dashboard-ranked').uiStream({
+            url: '/api/ui/userlist'
+        }).getStream();
+
+        $('#dashboard-simplelist').uiStream({
+            url: '/api/ui/todolist'
+        }).getStream();
+        
+        const tweetStorm = $('#Tweetstorm-dialog').tweetStorm({
+            modalUrl: '/api/ui/modalContent',
+            imageUrl: '/api/ui/modalImage',
+            contentContainer: '#Tweetstorm-dialog-dialog',
+            imageContainer: '#TweetAttachmentContainer',
+            textForm: '#tweet-textarea',
+            showButton: '#global-new-tweet-button',
+            closeButton: '#modal-close-button'
+        });
+
+        $('#profile-hover-container').profileCard({
+            url: '/api/ui/profileCard',
+            selector: '.tweet-user-avatar'
+        });
+
+        FF5.init();
+
+    });
+</script>

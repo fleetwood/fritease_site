@@ -1,0 +1,153 @@
+<div class="topbar js-topbar">
+  <div class="global-nav" data-section-term="top_nav">
+    <div class="global-nav-inner">
+      <div class="container">
+        <h1 class="Icon Icon--bird bird-topbar-etched">
+          <span class="visuallyhidden">Twitter</span>
+        </h1>
+        <div class="pushstate-spinner"></div>
+        <div role="navigation" style="display: inline-block;">
+          <ul class="nav js-global-actions" id="global-actions">
+            <li id="global-nav-home" class="home active" data-global-action="home">
+              <a class="js-nav js-tooltip js-dynamic-tooltip" data-placement="bottom" href="/FriTease"
+                data-component-context="home_nav" data-nav="home" data-original-title="">
+                <span class="Icon Icon--home Icon--large"></span>
+                <span class="Icon Icon--homeFilled Icon--large u-textUserColor"></span>
+                <span class="text" aria-hidden="true">FriTease</span>
+              </a>
+            </li>
+            <li class="people notifications" data-global-action="connect">
+              <a class="js-nav js-tooltip js-dynamic-tooltip" data-placement="bottom" href="http://twitter.com"
+                data-component-context="connect_nav" data-nav="connect" data-original-title="">
+                <span class="Icon Icon--notifications Icon--large"></span>
+                <span class="Icon Icon--notificationsFilled Icon--large u-textUserColor"></span>
+                <span class="text" aria-hidden="true">Twitter</span>
+              </a>
+            </li>
+            <li class="people notifications" data-global-action="connect">
+              <a class="js-nav js-tooltip js-dynamic-tooltip" data-placement="bottom" href="http://twitter.com/notifications"
+                data-component-context="connect_nav" data-nav="connect" data-original-title="" target="new">
+                <span class="Icon Icon--notifications Icon--large"></span>
+                <span class="Icon Icon--notificationsFilled Icon--large u-textUserColor"></span>
+                <span class="text" aria-hidden="true">Notifications</span>
+                <span class="count">
+                  <span class="count-inner">[TODO: Get notifications]</span>
+                </span>
+              </a>
+            </li>
+            <li class="people notifications" data-global-action="connect">
+              <a class="js-nav js-tooltip js-dynamic-tooltip" data-placement="bottom" href="/icons" data-component-context="connect_nav" data-nav="connect" data-original-title="">
+                <span class="Icon Icon--cog Icon--large"></span>
+                <span class="text" aria-hidden="true">Icons</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="pull-right nav-extras">
+          <div role="search">
+            <form class="t1-form form-search js-search-form" action="/search" id="global-nav-search">
+              <label class="visuallyhidden" for="search-query">Search query</label>
+              <input class="search-input" type="text" id="search-query" placeholder="Search FriTease" name="q"
+                autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false"
+                aria-owns="typeahead-dropdown-5">
+              <span class="search-icon js-search-action">
+                <button type="submit" class="Icon Icon--medium Icon--search nav-search" tabindex="-1">
+                  <span class="visuallyhidden">Search FriTease</span>
+                </button>
+              </span>
+            </form>
+          </div>
+          <ul class="nav right-actions">
+            <li class="me dropdown session js-session" data-global-action="t1me" id="user-dropdown">
+              <a href="/#" class="btn js-tooltip settings dropdown-toggle js-dropdown-toggle"
+                id="user-dropdown-toggle" title="Profile and settings" data-placement="bottom" rel="noopener"
+                role="button" aria-haspopup="true">
+                <img class="Avatar Avatar--size32" src="https://pbs.twimg.com/profile_images/1129065277633781760/gMIz7IPd_normal.jpg" alt="Profile and settings" data-user-id="805852551090470914">
+              </a>
+              <div class="DashUserDropdown dropdown-menu dropdown-menu--rightAlign is-forceRight is-autoCentered">
+                <div class="dropdown-caret">
+                  <span class="caret-outer"></span>
+                  <span class="caret-inner"></span>
+                </div>
+                <ul>
+                  <li class="DashUserDropdown-userInfo" data-name="user-info">
+                    <a href="/johnfpendleton" class="DashUserDropdown-userInfoLink js-nav" data-nav="view_profile">
+                      <b class="fullname">John Pendleton <span class="Emoji Emoji--forLinks"
+                          style="background-image:url('https://abs.twimg.com/emoji/v2/72x72/1f339.png')" title="Rose"
+                          aria-label="Emoji: Rose">&nbsp;</span><span class="visuallyhidden"
+                          aria-hidden="true">🌹</span></b><span class="UserBadges"></span>
+                      <p class="name"><span class="username u-dir u-textTruncate"
+                          dir="ltr">@<b>johnfpendleton</b></span></p>
+                    </a>
+                  </li>
+                  <li class="dropdown-divider"></li>
+                  <li class="current-user" data-name="profile">
+                    <a href="/johnfpendleton" class="js-nav" data-nav="view_profile">
+                      <span class="DashUserDropdown-linkIcon Icon Icon--medium Icon--me"></span>Profile
+                    </a>
+                  </li>
+                  <li data-name="lists">
+                    <a class="js-nav" href="/johnfpendleton/lists" data-nav="all_lists">
+                      <span class="DashUserDropdown-linkIcon Icon Icon--medium Icon--list"></span>Lists
+                    </a>
+                  </li>
+                  <li data-name="moments">
+                    <a class="js-nav" href="/johnfpendleton/moments" data-nav="all_moments">
+                      <span class="DashUserDropdown-linkIcon Icon Icon--medium Icon--lightning"></span>Moments
+                    </a>
+                  </li>
+                  <li class="dropdown-divider"></li>
+                  <li>
+                    <a href="https://ads.twitter.com/subscriptions/mobile/landing?ref=gl-tw-tw-promote-mode"
+                      target="_blank" data-nav="promote-mode" rel="noopener">
+                      <span class="DashUserDropdown-linkIcon Icon Icon--medium Icon--promoteMode"></span>Promote Mode
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://ads.twitter.com/?ref=gl-tw-tw-twitter-ads" target="_blank" data-nav="ads"
+                      rel="noopener">
+                      <span class="DashUserDropdown-linkIcon Icon Icon--medium Icon--promotedStroked"></span>Twitter Ads
+                    </a>
+                  </li>
+                  <li>
+                    <a class="user-dropdown-analytics" href="https://analytics.twitter.com/" target="_blank"
+                      data-nav="user_dropdown_analytics" rel="noopener">
+                      <span class="DashUserDropdown-linkIcon Icon Icon--medium Icon--analytics"></span>Analytics
+                    </a>
+                  </li>
+                  <li class="dropdown-divider"></li>
+                  <li><a href="/settings" data-nav="settings" class="js-nav" rel="noopener">Settings and privacy</a>
+                  </li>
+                  <li><a href="//support.twitter.com" data-nav="help_center" rel="noopener">Help Center</a></li>
+                  <li class="js-keyboard-shortcut-trigger" data-nav="shortcuts">
+                    <button type="button" class="dropdown-link">Keyboard shortcuts</button>
+                  </li>
+                  <li id="signout-button" data-nav="logout">
+                    <button type="button" class="dropdown-link js-logout-button">Log out <span
+                        class="username u-dir u-textTruncate" dir="ltr">@<b>johnfpendleton</b></span></button>
+                  </li>
+                  <li class="dropdown-divider"></li>
+                  <li class="current-user nightmode-toggle" data-name="profile">
+                    <a class="js-nav" data-nav="view_profile">
+                      <span class="DashUserDropdown-linkIcon Icon Icon--medium js-nightmode-icon Icon--lightBulbOff">
+                      </span><span class="js-nightmode-label">Dark mode</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li role="complementary" aria-labelledby="global-new-tweet-button" class="topbar-tweet-btn">
+              <button id="global-new-tweet-button"
+                class="js-global-new-tweet js-tooltip EdgeButton EdgeButton--primary js-dynamic-tooltip"
+                data-placement="bottom" data-component-context="new_tweet_button">
+                <span class="text">Tweet</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="alert-container"></div>
+</div>

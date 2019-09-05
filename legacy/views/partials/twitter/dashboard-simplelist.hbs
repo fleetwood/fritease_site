@@ -1,0 +1,36 @@
+<div class="flex-module">
+    <div class="flex-module-header">
+        <h3>{{{title}}}</h3>
+    </div>
+    <div class="UserSmallListItem js-account-summary account-summary js-actionable-user">
+        <ul class="trend-items js-trends">
+            {{#each list}}
+            <li class="trend-item js-trend-item promoted-trend context-trend-item" data-trend-name="{{name}}">
+                <hr />
+                <span class="u-linkComplex-target trend-name" dir="ltr"><strong>{{title}}</strong></span>
+                <a class="pretty-link js-nav js-tooltip u-linkComplex promoted" href="#"
+                    data-query-source="promoted_trend_click" dir="ltr">
+                    <div class="js-nav trend-item-context js-ellipsis">
+                        <ul>
+                        {{#each description as |d|}}
+                            <li>{{{d}}}</li>
+                        {{/each}}
+                        </ul>
+                    </div>
+                    {{#if footer}}
+                    <span class="with-icn js-disclosure js-tooltip" title="">
+                        <span class="Icon Icon--small Icon--promoted"></span>
+                        <b class="promoted-text">{{{footer}}}</b>
+                    </span>
+                    {{/if}}
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+<div class="flex-module import-prompt">
+    <div class="flex-module-footer u-table">
+        {{{footer}}}
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div id="tweet-stream" class="stream">
+    <ol class="stream-items js-navigable-stream" id="stream-items-id">
+        {{#each stream as |s|}}
+            {{#if s.isRetweet}}
+                {{#> twitter/retweet-item item=s}}
+                    retweet-item failover stream.hbs
+                {{/twitter/retweet-item}}
+            {{else}}
+                {{#> twitter/tweet-item item=s}}
+                    tweet-item failover stream.hbs
+                {{/twitter/tweet-item}}
+            {{/if}}
+        {{/each}}
+    </ol>
+</div>
+<button id="more-tweets" class="EdgeButton EdgeButton--primary" data-placement="bottom" data-next="{{next}}">
+    <span class="text">More</span>
+</button>

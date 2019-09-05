@@ -1,0 +1,35 @@
+mixin search_nav
+
+    .SearchNavigation
+        .SearchNavigation-canopy.u-bgUserColor
+            .SearchNavigation-textContainer
+                h1.SearchNavigation-titleText(dir='ltr') #FriTease Admin
+        .AdaptiveFiltersBar
+            .AdaptiveFiltersBar-container(data-component-context='search_filter_nav_bar')
+                ul.AdaptiveFiltersBar-nav
+                    li.AdaptiveFiltersBar-item.u-borderUserColor.is-selected
+                        a.AdaptiveFiltersBar-target.AdaptiveFiltersBar-target--link.js-nav.u-textUserColorHover.u-textUserColor(href='/search?vertical=default&q=%23FriTease&src=tyah', data-nav='search_filter_top') Top
+                    li.AdaptiveFiltersBar-item.u-borderUserColor
+                        a.AdaptiveFiltersBar-target.AdaptiveFiltersBar-target--link.js-nav.u-textUserColorHover(href='/search?f=tweets&vertical=default&q=%23FriTease&src=tyah', data-nav='search_filter_tweets') Latest
+                    li.AdaptiveFiltersBar-item.u-borderUserColor
+                        a.AdaptiveFiltersBar-target.AdaptiveFiltersBar-target--link.js-nav.u-textUserColorHover(href='/search?f=users&vertical=default&q=%23FriTease&src=tyah', data-nav='search_filter_users') People
+
+                .SearchExtrasDropdown.dropdown.u-dropdownOpenUserColor
+                    button.SearchExtrasDropdown-toggle.dropdown-toggle.js-dropdown-toggle.js-tooltip.u-textUserColorHover(type='button', data-placement='bottom', data-original-title='More search actions')
+                        span.Icon.Icon--dotsVertical.Icon--medium
+                    .dropdown-menu.is-autoCentered
+                        .dropdown-caret
+                            .caret-outer
+                            .caret-inner
+                        ul
+                            li.SearchExtrasDropdown-settings
+                                button.SearchExtrasDropdown-target.dropdown-link.js-openSearchSettings(type='button')
+                                    span.SearchExtrasDropdown-label Search settings
+                                    span.SearchExtrasDropdown-subtext Hiding sensitive content
+                            li.dropdown-divider
+                            li.SearchExtrasDropdown-savedSearch
+                                button.SearchExtrasDropdown-target.js-remove-search.js-toggle-saved-search-link.dropdown-link(type='button', data-id='956720223679401984')
+                                    span.SearchExtrasDropdown-label Remove this saved search
+                            li.SearchExtrasDropdown-embedSearch
+                                a.SearchExtrasDropdown-target.SearchExtrasDropdown-target--embed.js-nav(href='/settings/widgets/new/search?query=%23FriTease', data-nav='embedded_search')
+                                    span.SearchExtrasDropdown-label Embed this search

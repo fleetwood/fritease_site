@@ -1,0 +1,124 @@
+mixin navbar
+
+    -var navitems = [{label: 'Home',link: './'},{label: 'Tease',link: '/tease'},{label: 'Users',link: '/users'}];
+
+    .topbar.js-topbar
+        .ProfilePage-editingOverlay
+        .global-nav(data-section-term='top_nav')
+            .global-nav-inner
+                .container
+                    h1.Icon.Icon--bird.bird-topbar-etched(style='display: inline-block; width: 24px; height: 21px;')
+                        span.visuallyhidden Twitter
+                    .pushstate-spinner
+
+                    div(role='navigation', style='display: inline-block;')
+                        ul#global-actions.nav.js-global-actions
+                            li#global-nav-home.home(data-global-action='home')
+                                a.js-nav.js-tooltip.js-dynamic-tooltip(data-placement='bottom', href='/', data-component-context='home_nav', data-nav='home', data-original-title='')
+                                    span.Icon.Icon--home.Icon--large
+                                    span.Icon.Icon--homeFilled.Icon--large.u-textUserColor
+                                    span.text(aria-hidden='true') Home
+                                    span.u-hiddenVisually.a11y-inactive-page-text Home
+                                    span.u-hiddenVisually.a11y-active-page-text Home, current page.
+                                    span.u-hiddenVisually.hidden-new-items-text New Tweets available.
+                            li.people.notifications(data-global-action='connect')
+                                a.js-nav.js-tooltip.js-dynamic-tooltip(data-placement='bottom', href='/i/notifications', data-component-context='connect_nav', data-nav='connect')
+                                    span.Icon.Icon--notifications.Icon--large
+                                    span.Icon.Icon--notificationsFilled.Icon--large.u-textUserColor
+                                    span.text(aria-hidden='true') Notifications
+                                    span.u-hiddenVisually.a11y-inactive-page-text Notifications
+                                    span.u-hiddenVisually.a11y-active-page-text Notifications, current page.
+                                    span.count
+                                        span.count-inner 0
+                            li.dm-nav
+                                a.js-tooltip.js-dynamic-tooltip.global-dm-nav(role='button', href='#', data-placement='bottom')
+                                    span.Icon.Icon--dm.Icon--large
+                                    span.text Messages
+                                    span.dm-new
+                                    span.count-inner
+                        
+                    .pull-right.nav-extras
+                        ul.nav.right-actions
+                            li#user-dropdown.me.dropdown.session.js-session(data-global-action='t1me')
+                            a#user-dropdown-toggle.btn.js-tooltip.settings.dropdown-toggle.js-dropdown-toggle(href='/settings', data-placement='bottom', rel='noopener', role='button', aria-haspopup='true', data-original-title='Profile and settings')
+                                img.Avatar.Avatar--size32(src='https://pbs.twimg.com/profile_images/934714236252622848/-sEekRCo_normal.jpg', alt='Profile and settings', data-user-id='805852551090470914')
+                            .DashUserDropdown.dropdown-menu.dropdown-menu--rightAlign.is-forceRight.is-autoCentered
+                                .dropdown-caret
+                                span.caret-outer
+                                span.caret-inner
+                                ul
+                                li.DashUserDropdown-userInfo(data-name='user-info')
+                                    a.DashUserDropdown-userInfoLink.js-nav(href='/johnfpendleton', data-nav='view_profile')
+                                    b.fullname
+                                        | John Pendleton 
+                                        span.Emoji.Emoji--forLinks(style="background-image:url('https://abs.twimg.com/emoji/v2/72x72/1f339.png')", title='Rose', aria-label='Emoji: Rose')  
+                                        span.visuallyhidden(aria-hidden='true') 🌹
+                                    span.UserBadges
+                                    p.name
+                                        span.username.u-dir.u-textTruncate(dir='ltr')
+                                        | @
+                                        b johnfpendleton
+                                li.dropdown-divider
+                                li.current-user(data-name='profile')
+                                    a.js-nav(href='/johnfpendleton', data-nav='view_profile')
+                                    span.DashUserDropdown-linkIcon.Icon.Icon--medium.Icon--me
+                                    | Profile
+                                li(data-name='lists')
+                                    a.js-nav(href='/johnfpendleton/lists', data-nav='all_lists')
+                                    span.DashUserDropdown-linkIcon.Icon.Icon--medium.Icon--list
+                                    | Lists
+                                li(data-name='moments')
+                                    a.js-nav(href='/johnfpendleton/moments', data-nav='all_moments')
+                                    span.DashUserDropdown-linkIcon.Icon.Icon--medium.Icon--lightning
+                                    | Moments
+                                li.dropdown-divider
+                                li
+                                    a(href='https://ads.twitter.com/subscriptions/mobile/landing?ref=gl-tw-tw-promote-mode', target='_blank', data-nav='promote-mode', rel='noopener')
+                                    span.DashUserDropdown-linkIcon.Icon.Icon--medium.Icon--promoteMode
+                                    | Promote Mode
+                                li
+                                    a(href='https://ads.twitter.com/?ref=gl-tw-tw-twitter-ads', target='_blank', data-nav='ads', rel='noopener')
+                                    span.DashUserDropdown-linkIcon.Icon.Icon--medium.Icon--promotedStroked
+                                    | Twitter Ads
+                                li
+                                    a.user-dropdown-analytics(href='https://analytics.twitter.com/', target='_blank', data-nav='user_dropdown_analytics', rel='noopener')
+                                    span.DashUserDropdown-linkIcon.Icon.Icon--medium.Icon--analytics
+                                    | Analytics
+                                li.dropdown-divider
+                                li
+                                    a.js-nav(href='/settings', data-nav='settings', rel='noopener') Settings and privacy
+                                li
+                                    a(href='//support.twitter.com', data-nav='help_center', rel='noopener') Help Center
+                                li.js-keyboard-shortcut-trigger(data-nav='shortcuts')
+                                    button.dropdown-link(type='button') Keyboard shortcuts
+                                li#signout-button.js-signout-button(data-nav='logout')
+                                    button.dropdown-link(type='button') Log out
+                                    form#signout-form.t1-form.dropdown-link-form.signout-form(action='/logout', method='POST')
+                                    input.authenticity_token(type='hidden', value='350464c5e6f2b065c74a347fc0c51a775feffbbe', name='authenticity_token')
+                                    input.js-reliability-event(type='hidden', name='reliability_event')
+                                    input(type='hidden', name='scribe_log')
+                                li.dropdown-divider
+                                li.current-user.nightmode-toggle(data-name='profile')
+                                    a.js-nav(data-nav='view_profile')
+                                    span.DashUserDropdown-linkIcon.Icon.Icon--medium.js-nightmode-icon.Icon--crescentFilled
+                                    span.js-nightmode-label Night mode
+                            li.topbar-tweet-btn(role='complementary', aria-labelledby='global-new-tweet-button')
+                            button#global-new-tweet-button.js-global-new-tweet.js-tooltip.EdgeButton.EdgeButton--primary.js-dynamic-tooltip(data-placement='bottom', data-component-context='new_tweet_button', data-original-title='')
+                                span.text Tweet
+
+        //-   li.nav-item.dropdown
+        //-     a.nav-link.dropdown-toggle(href:"#", id:"navbarDropdown", role:"button", data-toggle:"dropdown", aria-haspopup:"true", aria-expanded:"false") Dropdown
+
+        //-     .dropdown-menu(aria-labelledby:"navbarDropdown")
+        //-       a.dropdown-item(href:"#") Action
+        //-       a.dropdown-item(href:"#") Another Action
+        //-       .dropdown-divider
+        //-       a.dropdown-item(href:"#") Last Action
+
+        //-   li.nav-item
+        //-     a.nav-link.disabled(href:"#") Disabled
+            
+        //- form.form-inline.my-2.my-lg-0
+        //-   input.form-control.mr-sm-2(type:"search", placeholder:"Search", aria-label:"Search")
+        //-   button.btn.btn-outline-success.my-2.my-sm-0(type:"submit") Search
+        

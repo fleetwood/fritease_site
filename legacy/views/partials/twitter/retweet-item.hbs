@@ -1,0 +1,83 @@
+<li class="js-stream-item stream-item stream-item js-activity js-activity-reply" data-item-id="{{item.id}}"
+    id="stream-item-activity-{{item.id}}" data-item-type="activity" data-component-context="reply_activity">
+    <div class="tweet js-stream-tweet js-actionable-tweet js-profile-popup-actionable dismissible-content original-tweet js-original-tweet has-cards has-content favorited"
+        data-tweet-id="{{item.id}}" data-item-id="{{item.id}}"
+        data-permalink-path="/{{item.user.name}}/status/{{item.id}}" data-conversation-id="1148782025144508419"
+        data-is-reply-to="true" data-has-parent-tweet="true"
+        data-screen-name="{{item.user.name}}" data-name="{{item.user.screen_name}}" data-user-id="883851504704081920" data-you-follow="true"
+        data-follows-you="true" data-you-block="false" data-mentions=""
+        data-reply-to-users-json="[{&quot;id_str&quot;:&quot;883851504704081920&quot;,&quot;screen_name&quot;:&quot;{{item.user.name}}&quot;,&quot;name&quot;:&quot;\u2764\ud83d\udda4Amina\ud83d\udda4\u2764&quot;,&quot;emojified_name&quot;:{&quot;text&quot;:&quot;\u2764\ud83d\udda4Amina\ud83d\udda4\u2764&quot;,&quot;emojified_text_as_html&quot;:&quot;\u003cspan class=\&quot;Emoji Emoji--forLinks\&quot; style=\&quot;background-image:url('https:\/\/abs.twimg.com\/emoji\/v2\/72x72\/2764.png')\&quot; title=\&quot;Red heart\&quot; aria-label=\&quot;Emoji: Red heart\&quot;\u003e&amp;nbsp;\u003c\/span\u003e\u003cspan class=\&quot;visuallyhidden\&quot; aria-hidden=\&quot;true\&quot;\u003e\u2764\u003c\/span\u003e\u003cspan class=\&quot;Emoji Emoji--forLinks\&quot; style=\&quot;background-image:url('https:\/\/abs.twimg.com\/emoji\/v2\/72x72\/1f5a4.png')\&quot; title=\&quot;Black heart\&quot; aria-label=\&quot;Emoji: Black heart\&quot;\u003e&amp;nbsp;\u003c\/span\u003e\u003cspan class=\&quot;visuallyhidden\&quot; aria-hidden=\&quot;true\&quot;\u003e\ud83d\udda4\u003c\/span\u003eAmina\u003cspan class=\&quot;Emoji Emoji--forLinks\&quot; style=\&quot;background-image:url('https:\/\/abs.twimg.com\/emoji\/v2\/72x72\/1f5a4.png')\&quot; title=\&quot;Black heart\&quot; aria-label=\&quot;Emoji: Black heart\&quot;\u003e&amp;nbsp;\u003c\/span\u003e\u003cspan class=\&quot;visuallyhidden\&quot; aria-hidden=\&quot;true\&quot;\u003e\ud83d\udda4\u003c\/span\u003e\u003cspan class=\&quot;Emoji Emoji--forLinks\&quot; style=\&quot;background-image:url('https:\/\/abs.twimg.com\/emoji\/v2\/72x72\/2764.png')\&quot; title=\&quot;Red heart\&quot; aria-label=\&quot;Emoji: Red heart\&quot;\u003e&amp;nbsp;\u003c\/span\u003e\u003cspan class=\&quot;visuallyhidden\&quot; aria-hidden=\&quot;true\&quot;\u003e\u2764\u003c\/span\u003e&quot;}}]"
+        data-disclosure-type="" data-has-cards="true">
+        <div class="context"></div>
+        <div class="content">
+            <div class="stream-item-header">
+                {{#> twitter/tweet-user user=item.user date=item.createDate}}
+                {{/twitter/tweet-user}}
+                
+                <small class="time">
+                    <a href="/{{user.screenName}}/status/{{item.id}}" class="tweet-timestamp js-permalink js-nav js-tooltip"
+                        title="12:20 PM - 10 Jul 2019" data-conversation-id="1148782025144508419">
+                        <span class="_timestamp js-short-timestamp js-relative-timestamp" data-time="1562779217"
+                            data-time-ms="1562779217000" data-long-form="true" aria-hidden="true">
+                            {{item.createDate}}
+                        </span>
+                    </a>
+                </small>
+            </div>
+
+            {{#if item.isReply}}
+            <div class="ReplyingToContextBelowAuthor" data-aria-label-part="">Replying to <a class="pretty-link js-user-profile-link" href="#" data-user-id="{{item.retweetUser.id}}" rel="noopener" dir="ltr"><span class="username u-dir u-textTruncate" dir="ltr">@<b>{{item.retweetUser.name}}</b></span></a>
+            </div>
+            {{/if}}
+
+            {{#if item.hasPile}}
+            <div class="ActivityItem-textSection">
+                <span class="UserNameBreak">&nbsp;</span>
+                <ol class="ActivityItem-facepileContainer">
+                    {{#each item.facepile as |u|}}
+                    <li class="ActivityItem-facepileItem">
+                        <a class="js-profile-popup-actionable js-tooltip" href="twitter.com/{{u.screenName}}"
+                            data-user-id="{{u.id}}" original-title="{{u.name}}" rel="noopener"
+                            data-original-title="{{u.name}}">
+                            <img class="avatar size24 js-user-profile-link"
+                                src="{{u.profileImage}}"
+                                alt="{{u.name}}" />
+                        </a>
+                    </li>
+                    {{/each}}
+                </ol>
+                <div class="ActivityItem-displayText">
+                    <p><strong>{{item.facepile.length}} others</strong> retweeted </p>
+                    {{#> twitter/tweet-user user=item.retweetUser}}
+                    {{/twitter/tweet-user}}
+                    <div class="ActivityItem-activityTimestamp">
+                        <div class="activity-timestamp">
+                            <span class="_timestamp" data-time="1562789330" data-time-ms="1562789330752"
+                                data-long-form="true" aria-hidden="true">1h</span>
+                            <span class="u-hiddenVisually" data-aria-label-part="last">1 hour ago</span>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+            </div>
+            {{/if}}
+
+            <div class="js-tweet-text-container">
+                <p class="TweetTextSize  js-tweet-text tweet-text" lang="en" data-aria-label-part="0">{{{item.retweetStatus.text}}}</p>
+            </div>
+            
+            {{#if item.retweetStatus.media}}
+                {{#> twitter/tweet-media item.retweetStatus}}
+                {{/twitter/tweet-media}}
+            {{else if item.media}}
+                {{#> twitter/tweet-media item}}
+                {{/twitter/tweet-media}}
+            {{/if}}
+
+            <div class="stream-item-footer">
+                {{#> twitter/tweet-item-footer item}}
+                {{/twitter/tweet-item-footer}}
+            </div>
+        </div>
+    </div>
+</li>

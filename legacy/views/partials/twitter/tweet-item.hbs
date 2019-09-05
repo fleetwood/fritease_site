@@ -1,0 +1,252 @@
+<li class="js-stream-item stream-item stream-item js-activity js-activity-reply" data-item-id="{{item.id}}"
+    id="stream-item-activity-{{item.id}}" data-item-type="activity" data-component-context="reply_activity">
+    <div class="tweet js-stream-tweet js-actionable-tweet js-profile-popup-actionable dismissible-content original-tweet js-original-tweet has-cards has-content favorited"
+        data-tweet-id="{{item.id}}" data-is-reply-to="true" data-has-parent-tweet="true"
+        data-screen-name="{{item.user.screenName}}" data-name="{{item.user.name}}" data-user-id="{{item.user.id}}" data-you-follow="true"
+        data-follows-you="true" data-you-block="false" data-mentions="johnfpendleton">
+        <div class="content">
+            <div class="stream-item-header">
+                {{#> twitter/tweet-user user=item.user date=item.createDate}}
+                {{/twitter/tweet-user}}
+                
+                <small class="time">
+                    <a href="/{{user.screenName}}/status/{{item.id}}" class="tweet-timestamp js-permalink js-nav js-tooltip"
+                        title="12:20 PM - 10 Jul 2019" data-conversation-id="1148782025144508419">
+                        <span class="_timestamp js-short-timestamp js-relative-timestamp" data-time="1562779217"
+                            data-time-ms="1562779217000" data-long-form="true" aria-hidden="true">
+                            {{item.createDate}}
+                        </span>
+                    </a>
+                </small>
+
+                <div class="ProfileTweet-action ProfileTweet-action--more js-more-ProfileTweet-actions">
+                    <div class="dropdown">
+                        <button
+                            class="ProfileTweet-actionButton u-textUserColorHover dropdown-toggle js-dropdown-toggle"
+                            type="button" id="menu-0">
+                            <div class="IconContainer js-tooltip" data-original-title="More">
+                                <span class="Icon Icon--caretDownLight Icon--small">
+                                </span>
+                                <span class="u-hiddenVisually">More</span>
+                            </div>
+                        </button>
+                        <div class="dropdown-menu is-autoCentered">
+                            <div class="dropdown-caret">
+                                <div class="caret-outer">
+                                </div>
+                                <div class="caret-inner">
+                                </div>
+                            </div>
+                            <ul tabindex="-1" role="menu" aria-labelledby="menu-0" aria-hidden="true">
+                                <li class="copy-link-to-tweet js-actionCopyLinkToTweet" role="presentation">
+                                    <button type="button" class="dropdown-link" role="menuitem">Copy link to
+                                        Tweet</button>
+                                </li>
+                                <li class="embed-link js-actionEmbedTweet" data-nav="embed_tweet" role="presentation">
+                                    <button type="button" class="dropdown-link" role="menuitem">Embed Tweet</button>
+                                </li>
+                                <li class="mute-user-item" role="presentation">
+                                    <button type="button" class="dropdown-link" role="menuitem">Mute <span
+                                            class="username u-dir u-textTruncate" dir="ltr">@<b>{{item.user.screenName}}</b>
+                                        </span>
+                                    </button>
+                                </li>
+                                <li class="unmute-user-item" role="presentation">
+                                    <button type="button" class="dropdown-link">Unmute <span
+                                            class="username u-dir u-textTruncate" dir="ltr">@<b>{{item.user.screenName}}</b>
+                                        </span>
+                                    </button>
+                                </li>
+                                <li class="mute-conversation-item" role="presentation">
+                                    <button type="button" class="dropdown-link" role="menuitem">Mute this
+                                        conversation</button>
+                                </li>
+                                <li class="unmute-conversation-item" role="presentation">
+                                    <button type="button" class="dropdown-link">Unmute this conversation</button>
+                                </li>
+                                <li class="block-link js-actionBlock" data-nav="block" role="presentation">
+                                    <button type="button" class="dropdown-link" role="menuitem">Block <span
+                                            class="username u-dir u-textTruncate" dir="ltr">@<b>{{item.user.screenName}}</b>
+                                        </span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{#if isReply}}
+                <div class="ReplyingToContextBelowAuthor" data-aria-label-part="">Replying to <a class="pretty-link js-user-profile-link" href="/johnfpendleton" data-user-id="805852551090470914" rel="noopener" dir="ltr"><span class="username u-dir u-textTruncate" dir="ltr">@<b>johnfpendleton</b></span></a>
+                </div>
+            {{/if}}
+            
+            {{#if isRetweet}}
+            <div class="ActivityItem-textSection">
+                <ol class="ActivityItem-facepileContainer">
+                    <li class="ActivityItem-facepileItem">
+                        <a class="js-profile-popup-actionable js-tooltip" href="/MadQueenStorm"
+                            data-user-id="1587521689" original-title="(Ghost) Storm ☽✪☾" rel="noopener"
+                            data-original-title="(Ghost) Storm ☽✪☾">
+                            <img class="avatar size24 js-user-profile-link"
+                                src="https://pbs.twimg.com/profile_images/1110228947189592064/ZXMrYwbE_normal.png"
+                                alt="(Ghost) Storm ☽✪☾">
+                        </a>
+                    </li>
+                    <li class="ActivityItem-facepileItem">
+                        <a class="js-profile-popup-actionable js-tooltip" href="/AnneBohannon_"
+                            data-user-id="881596230060699648" original-title="Anne Bohannon"
+                            title="Anne Bohannon" rel="noopener">
+                            <img class="avatar size24 js-user-profile-link"
+                                src="https://pbs.twimg.com/profile_images/1068511239385612288/tQKRyU5f_normal.jpg"
+                                alt="Anne Bohannon">
+                        </a>
+                    </li>
+                    <li class="ActivityItem-facepileItem">
+                        <a class="js-profile-popup-actionable js-tooltip" href="/mxmalini"
+                            data-user-id="1047464070629081089" original-title="Magnificent Malini 👩🏼‍🦰 🌈"
+                            title="Magnificent Malini 👩🏼‍🦰 🌈" rel="noopener">
+                            <img class="avatar size24 js-user-profile-link"
+                                src="https://pbs.twimg.com/profile_images/1126120815391469569/Lc-gCX4f_normal.png"
+                                alt="Magnificent Malini 👩🏼‍🦰 🌈">
+                        </a>
+                    </li>
+                    <li class="ActivityItem-facepileItem">
+                        <a class="js-profile-popup-actionable js-tooltip" href="/LexiIsAWriter"
+                            data-user-id="3398164163" original-title="Lexi Lefevre" title="Lexi Lefevre"
+                            rel="noopener">
+                            <img class="avatar size24 js-user-profile-link"
+                                src="https://pbs.twimg.com/profile_images/875566958778793986/iSLNzdBW_normal.jpg"
+                                alt="Lexi Lefevre">
+                        </a>
+                    </li>
+                    <li class="ActivityItem-facepileItem">
+                        <a class="js-profile-popup-actionable js-tooltip" href="/juderoy29"
+                            data-user-id="3438688060" original-title="jude roy" title="jude roy" rel="noopener">
+                            <img class="avatar size24 js-user-profile-link"
+                                src="https://pbs.twimg.com/profile_images/1073656048421089281/AjKse5VO_normal.jpg"
+                                alt="jude roy">
+                        </a>
+                    </li>
+                    <li class="ActivityItem-facepileItem">
+                        <a class="js-profile-popup-actionable js-tooltip" href="/GeneVatow"
+                            data-user-id="298391670" original-title="Indigenous Soul" title="Indigenous Soul"
+                            rel="noopener">
+                            <img class="avatar size24 js-user-profile-link"
+                                src="https://pbs.twimg.com/profile_images/1118857320069509122/cLf-KWqO_normal.png"
+                                alt="Indigenous Soul">
+                        </a>
+                    </li>
+                    <li class="ActivityItem-facepileItem">
+                        <a class="js-profile-popup-actionable js-tooltip" href="/ericlahti1"
+                            data-user-id="2675543232" original-title="Eric Lahti" title="Eric Lahti"
+                            rel="noopener">
+                            <img class="avatar size24 js-user-profile-link"
+                                src="https://pbs.twimg.com/profile_images/1093315837052706816/qCATPsz-_normal.jpg"
+                                alt="Eric Lahti">
+                        </a>
+                    </li>
+                    <li class="ActivityItem-facepileItem">
+                        <a class="js-profile-popup-actionable js-tooltip" href="/Jason_H_Abbott"
+                            data-user-id="4919632347" original-title="Jason H. Abbott" title="Jason H. Abbott"
+                            rel="noopener">
+                            <img class="avatar size24 js-user-profile-link"
+                                src="https://pbs.twimg.com/profile_images/920054322133700608/MfD5_N5P_normal.jpg"
+                                alt="Jason H. Abbott">
+                        </a>
+                    </li>
+                    <li class="ActivityItem-facepileItem">
+                        <a class="js-profile-popup-actionable js-tooltip" href="/Annie_MB01"
+                            data-user-id="1049444267368869888" original-title="D. Annie 📝💜🌻🦋"
+                            title="D. Annie 📝💜🌻🦋" rel="noopener">
+                            <img class="avatar size24 js-user-profile-link"
+                                src="https://pbs.twimg.com/profile_images/1094099989280698368/unE3KA_R_normal.jpg"
+                                alt="D. Annie 📝💜🌻🦋">
+                        </a>
+                    </li>
+                    <li class="ActivityItem-facepileItem">
+                        <a class="js-profile-popup-actionable js-tooltip" href="/JennWritesVamps"
+                            data-user-id="1131274189"
+                            original-title="💮Jenn is busy editing AGAIN 😿 &amp; drafting... 💮🦄"
+                            title="💮Jenn is busy editing AGAIN 😿 &amp; drafting... 💮🦄" rel="noopener">
+                            <img class="avatar size24 js-user-profile-link"
+                                src="https://pbs.twimg.com/profile_images/1112270281966567429/p-SrY1wB_normal.png"
+                                alt="💮Jenn is busy editing AGAIN 😿 &amp; drafting... 💮🦄">
+                        </a>
+                    </li>
+                    <li class="ActivityItem-facepileItem">
+                        <a class="js-profile-popup-actionable js-tooltip" href="/chipmunkofpower"
+                            data-user-id="3302034628" original-title="Rebecca Frohling" title="Rebecca Frohling"
+                            rel="noopener">
+                            <img class="avatar size24 js-user-profile-link"
+                                src="https://pbs.twimg.com/profile_images/866082341051138048/0AWw90up_normal.jpg"
+                                alt="Rebecca Frohling">
+                        </a>
+                    </li>
+                    <li class="ActivityItem-facepileItem">
+                        <a class="js-profile-popup-actionable js-tooltip" href="/danielleswritin"
+                            data-user-id="90930299" original-title="Danielle Scruton 🖊📖"
+                            title="Danielle Scruton 🖊📖" rel="noopener">
+                            <img class="avatar size24 js-user-profile-link"
+                                src="https://pbs.twimg.com/profile_images/1106010252238114816/ZT1sAUVo_normal.jpg"
+                                alt="Danielle Scruton 🖊📖">
+                        </a>
+                    </li>
+                    <li class="ActivityItem-facepileItem">
+                        <a class="js-profile-popup-actionable js-tooltip" href="/NathanBrazil650"
+                            data-user-id="969419383876415488"
+                            original-title="Nathan Brazil - trying to keep my head above water"
+                            title="Nathan Brazil - trying to keep my head above water" rel="noopener">
+                            <img class="avatar size24 js-user-profile-link"
+                                src="https://pbs.twimg.com/profile_images/998766799125602305/AQGmDkt6_normal.jpg"
+                                alt="Nathan Brazil - trying to keep my head above water">
+                        </a>
+                    </li>
+                    <li class="ActivityItem-facepileItem">
+                        <a class="js-profile-popup-actionable js-tooltip" href="/lidywilks"
+                            data-user-id="2872412806" original-title="lidywilks" title="lidywilks"
+                            rel="noopener">
+                            <img class="avatar size24 js-user-profile-link"
+                                src="https://pbs.twimg.com/profile_images/839271146059141120/dewogepc_normal.jpg"
+                                alt="lidywilks">
+                        </a>
+                    </li>
+                    <li class="ActivityItem-facepileItem">
+                        <a class="js-profile-popup-actionable js-tooltip" href="/leftybookophile"
+                            data-user-id="4835541974" original-title="amcii cullum" title="amcii cullum"
+                            rel="noopener">
+                            <img class="avatar size24 js-user-profile-link"
+                                src="https://pbs.twimg.com/profile_images/1069232387664556032/RRZIFPJ3_normal.jpg"
+                                alt="amcii cullum">
+                        </a>
+                    </li>
+                </ol>
+                <div class="ActivityItem-displayText">
+                    <strong>(Ghost) Storm ☽✪☾</strong> and 14 others liked a Tweet from K Kibbee<div
+                        class="ActivityItem-activityTimestamp">
+                        <div class="activity-timestamp">
+                            <span class="_timestamp" data-time="1562789330" data-time-ms="1562789330752"
+                                data-long-form="true" aria-hidden="true">1h</span>
+                            <span class="u-hiddenVisually" data-aria-label-part="last">1 hour ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/if}}
+
+            <div class="js-tweet-text-container">
+                <p class="TweetTextSize  js-tweet-text tweet-text" lang="en" data-aria-label-part="0">{{{item.text}}}</p>
+            </div>
+            
+            {{#if item.media}}    
+                {{#> twitter/tweet-media item}}
+                {{/twitter/tweet-media}}
+            {{/if}}
+
+            <div class="stream-item-footer">
+                {{#> twitter/tweet-item-footer item}}
+                {{/twitter/tweet-item-footer}}
+            </div>
+        </div>
+    </div>
+</li>

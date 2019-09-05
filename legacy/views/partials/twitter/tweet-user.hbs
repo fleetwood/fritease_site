@@ -1,0 +1,23 @@
+{{#if list}}
+<a class="account-group js-recommend-link js-user-profile-link user-thumb" data-user-id="{{user.id}}" rel="noopener">
+    {{#> twitter/tweet-user-avatar user}}
+    {{/twitter/tweet-user-avatar}}
+    <span class="account-group-inner" data-user-id="{{user.id}}">
+        <strong class="fullname" style="text-overflow: ellipsis-word;">{{{user.name}}}</strong>
+        <span class="UserBadges">({{user.rank}})</span>
+        <span class="UserNameBreak">&nbsp;</span>
+        <span class="username u-dir u-textTruncate" dir="ltr">@<b>{{user.screenName}}</b></span>
+    </span>
+</a>
+{{else}}
+<a class="account-group js-account-group js-action-profile js-user-profile-link js-nav" data-user-id="{{user.id}}">
+    {{#> twitter/tweet-user-avatar user}}
+    {{/twitter/tweet-user-avatar}}
+    <span class="FullNameGroup">
+        <strong class="fullname show-popup-with-id u-textTruncate " data-aria-label-part="">
+            {{user.name}}
+        </strong>
+        <span class="UserNameBreak">&nbsp;</span>
+    </span>
+</a>
+{{/if}}

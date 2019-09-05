@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    ul
+        for status in message.data.statuses
+            li
+                pre= JSON.stringify(status, null, 4)

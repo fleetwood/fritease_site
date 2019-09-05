@@ -1,0 +1,41 @@
+<style>
+    .icon-sample {
+        background: #182430;
+        float: left;
+        padding: 1em;
+        margin: 0.5em;
+        border: 1px solid #38444d;
+        border-radius: 5px;
+        width: 120px;
+        height: 120px;
+        text-align: center;
+    }
+    .preview {
+        margin: 20%;
+        background: #333;
+        padding: 5px;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 12px;
+        display: inline-block;
+    }
+    .jscolor {
+        width: 100%!important;
+        border: none;
+        margin: auto;
+    }
+</style>
+<br style="clear: both;" />
+<div class="d-flex flex-row">
+    {{#each styles as |s|}}
+    <div class="icon-sample" style="{{s.style}}">
+        {{!-- <span class="Icon Icon--superLarge">{{s}}</span> --}}
+        <div class="preview">
+            {{s.current}}
+            <br />
+            <strong>{{s.name}}</strong>
+            <input name="{{s.name}}" id="{{s.name}}" class="jscolor" value="{{s.replace}}">
+        </div>
+    </div>
+    {{/each}}
+</div>

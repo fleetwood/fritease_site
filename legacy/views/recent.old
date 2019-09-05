@@ -1,0 +1,69 @@
+{{#> cal-select}}
+{{/cal-select}}
+<div class="d-flex align-content-start flex-wrap stream-container"></div>
+<script id="tweet-stream" type="text/x-handlebars-template">
+    {{#each stream}}
+        <div class="p-1 m-1 col-md-3 col-sm-10 flex-stream align-self-start align-self-stretch row">
+            <div class="align-self-start">
+                <div class="p-1 stream-time">{{createDate}}</div>
+                <div class="p-1 sub-stream">{{{text}}}</div>
+            </div>
+        </div>
+    {{/each}}
+</script>
+<script>
+    $(document).ready(function () {
+        var result = {
+            stream: [
+                {
+                    "createDate": "Jul 05, 04:34 pm",
+                    "id": 1147257536510173200,
+                    "text": "He was lavish with his compliments\nHe loved my curvy hips\nHe loved to buy me presents\nAnd he loved my luscious lips\nBut he never really talked with me\nNever peeked into my heart\nThat’s how I knew he’s not the one\nAnd why we had to part. \n\n#relationships #FriTease https://t.co/W766TcjpJn",
+                    "retweets": 2,
+                    "favorites": 10,
+                    "favorited": false,
+                    "retweeted": false,
+                    "user": {
+                        "id": 588603818,
+                        "name": "Autumn Faraday",
+                        "screen_name": "AutumnFaraday",
+                        "description": "A suspicious mind and catlike reflexes can serve you well. Be careful. They're always watching. Always. Transient bursts of Wisdom.",
+                        "followers": 4403,
+                        "friends": 2974,
+                        "total_favorites": 79424,
+                        "total_tweets": 0,
+                        "profile_image": "http://pbs.twimg.com/profile_images/1138445978959110144/MJeqzeJk_normal.jpg",
+                        "profile_image_https": "https://pbs.twimg.com/profile_images/1138445978959110144/MJeqzeJk_normal.jpg",
+                        "follows": true
+                    }
+                },
+            ]
+        };
+        let streamHtml = $('#tweet-stream').html();
+        let template = Handlebars.compile(streamHtml);
+        $('.stream-container').append(template(result));
+        
+/*
+        $.ajax({
+            url: 'http://localhost:3001/friTease',
+            jsonpCallback: 'friTeaseCallback',
+            contentType: "application/json",
+            dataType: 'jsonp',
+            success: function (data) {
+                result = data;
+                console.log(result)
+                var tweetStreamTemplate = $('#tweet-stream').html();
+                var compliledTemplateHtml = Handlebars.compile(tweetStreamTemplate);
+
+                var contextualHtml = compliledTemplateHtml(result)
+                $('#tweet-stream').html(contextualHtml)
+                console.log(result);
+            },
+            error: function (e) {
+                console.log(e.message);
+            }
+
+        });
+*/
+    });
+</script>

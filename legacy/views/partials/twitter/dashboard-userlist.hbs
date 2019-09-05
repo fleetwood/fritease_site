@@ -1,0 +1,30 @@
+<div class="flex-module">
+    <div class="flex-module-header">
+        <h3>{{{title}}}</h3>
+    </div>
+    <div class="UserSmallListItem js-account-summary account-summary js-actionable-user">
+        {{#each list as |u|}}
+        <div class="UserSmallListItem-context"></div>
+        
+        <div class="dismiss js-action-dismiss">
+            <span class="Icon Icon--close" data-ff5-remove-id="{{u.id}}"></span>
+        </div>
+
+        <div class="content">
+            {{#> twitter/tweet-user user=u list=true}}
+            {{/twitter/tweet-user}}
+        </div>
+        {{/each}}
+    </div>
+</div>
+<div class="flex-module import-prompt">
+    <div class="flex-module-footer u-table">
+        {{#if isFF5}}
+            <button class="js-global-new-tweet js-tooltip EdgeButton EdgeButton--primary js-dynamic-tooltip" data-placement="bottom">
+                <span id="global-ff5-clear" class="text">Clear</span>
+            </button>
+        {{else}}
+            {{{footer}}}
+        {{/if}}
+    </div>
+</div>
